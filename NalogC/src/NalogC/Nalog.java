@@ -214,7 +214,7 @@ JLabel.CENTER - выравнивание по центру
 JLabel.LEFT - выравнивание по левому краю
 JLabel.RIGHT - выравнивание по правому краю
 */
-label_1 = new JLabel("Вычитать налог для:", JLabel.LEFT); 
+label_1 = new JLabel("Вычислить налог для:", JLabel.LEFT);
 label_2 = new JLabel("Резидент", JLabel.LEFT); 
 label_3 = new JLabel("Сумма налога, руб.", JLabel.LEFT); 
 label_4 = new JLabel("Сумма на руки, руб.", JLabel.LEFT); 
@@ -229,6 +229,7 @@ sum = new JLabel("", JLabel.CENTER);
  *  JButton в скобках - надпись на кнопке*/
 calc = new JButton("Рассчитать"); 
 calc2 = new JButton("В меню"); 
+calc2.setBackground(Color.GREEN);
 /*Текстовое поле, в которое пользователь вводит данные */
 sum_ok = new JTextField(); 
 /*выравнивание текста по центру*/
@@ -279,8 +280,8 @@ panel.add(label_4);
 panel.add(sum); 
 panel.add(sum_ok); 
 /*Добавление кнопок на панель panel1*/
-panel1.add(calc); 
 panel1.add(calc2); 
+panel1.add(calc); 
 /* 	rad_13 - компонент переключатель
 	"."  - указывает, к какой переменной следует применить слушателя.
 	addActionListener - добавление слушателя ActionListener к переключателю
@@ -610,32 +611,33 @@ label_n18 = new JLabel("Иное", JLabel.LEFT);
  *  JButton в скобках - надпись на кнопке*/
 calc3 = new JButton("В меню"); 
 calc4 = new JButton("Изменить"); 
+calc3.setBackground(Color.GREEN);
 /*Текстовое поле, в которое пользователь вводит данные */
-sum_ok = new JTextField(); 
+sum_ok = new JTextField(Double.toString(a4)); 
 /*Выравнивание текста по центру*/
 sum_ok.setHorizontalAlignment(JTextField.CENTER);
 /*Установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
 sum_ok.setMargin(new Insets(2, 5, 2, 5)); 
 /*Текстовое поле, в которое пользователь вводит данные */
-sum_ok1 = new JTextField(); 
+sum_ok1 = new JTextField(Double.toString(a1)); 
 /*Выравнивание текста по центру*/
 sum_ok1.setHorizontalAlignment(JTextField.CENTER); 
 /*Установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
 sum_ok1.setMargin(new Insets(2, 5, 2, 5)); 
 /*Текстовое поле, в которое пользователь вводит данные */
-sum_ok2 = new JTextField(); 
+sum_ok2 = new JTextField(Double.toString(a)); 
 /*Выравнивание текста по центру*/
 sum_ok2.setHorizontalAlignment(JTextField.CENTER); 
 /*Установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
 sum_ok2.setMargin(new Insets(2, 5, 2, 5)); 
 /*Текстовое поле, в которое пользователь вводит данные */
-sum_ok3 = new JTextField(); 
+sum_ok3 = new JTextField(Double.toString(a2)); 
 /*Выравнивание текста по центру*/
 sum_ok3.setHorizontalAlignment(JTextField.CENTER); 
 /*Установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
 sum_ok3.setMargin(new Insets(2, 5, 2, 5)); 
 /*Текстовое поле, в которое пользователь вводит данные */
-sum_ok4 = new JTextField(); 
+sum_ok4 = new JTextField(Double.toString(a3)); 
 /*Выравнивание текста по центру*/
 sum_ok4.setHorizontalAlignment(JTextField.CENTER); 
 /*Установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
