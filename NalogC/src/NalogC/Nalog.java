@@ -90,6 +90,7 @@ JFrame - само окно. JFrame содержит в себе всё необ�
 	public Nalog() { 
 	/*Устанавливает название окна*/
 	setTitle("Меню");
+	setResizable(false);
 	/*Указывает ширину и высоту*/
 	setSize(225, 175); 
 	/*Установить посередине экрана*/
@@ -181,6 +182,7 @@ JRadioButton rad_13, rad_13_1,rad_15, rad_30, rad_35;
 form2.setTitle("Калькулятор НДФЛ");
 /*Указывает ширину и высоту в form2.*/
 form2.setSize(475, 290); 
+form2.setResizable(false);
 /*Установить посередине экрана в form2*/
 form2.setLocationRelativeTo(null); 
 /*По закрытию формы - не закрывать приложение в form2*/
@@ -232,6 +234,14 @@ calc2 = new JButton("В меню");
 calc2.setBackground(Color.GREEN);
 /*Текстовое поле, в которое пользователь вводит данные */
 sum_ok = new JTextField(); 
+sum_ok.addKeyListener(new KeyAdapter() {
+    public void keyTyped(KeyEvent e) { 
+    	JDialog Q = new JDialog();
+        if (sum_ok.getText().length() >= 10 ) { // limit textfield to 3 characters
+            e.consume(); 
+        }
+    }  
+});
 /*выравнивание текста по центру*/
 sum_ok.setHorizontalAlignment(JTextField.CENTER);
 /*установка внутренних отступов для текстового поля (2 - верхний отступ, 5 - левый, 2 - нижний, 5 - правый)*/
@@ -546,6 +556,7 @@ form3.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 form3.setLayout (new BorderLayout()); 
 /*Окно создается видимым*/
 form3.setVisible(true); 
+form3.setResizable(false);
 /*Кнопки "Изменить" и "В меню" */
 JButton calc3,calc4; 
 /*Панели на котором располагаются поля и кнопки.*/
